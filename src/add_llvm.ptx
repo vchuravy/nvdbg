@@ -3,7 +3,7 @@
 //
 
 .version 3.2
-.target sm_20
+.target sm_20, debug
 .address_size 64
 
 	.file	1 "/home/v/valentin-churavy/src/nvdbg/src/add.cu"
