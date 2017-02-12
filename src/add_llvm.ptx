@@ -6,21 +6,14 @@
 .target sm_20, debug
 .address_size 64
 
-	.file	1 "/home/v/valentin-churavy/src/nvdbg/src/add.cu"
-	.file	2 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_math_forward_declares.h"
-	.file	3 "/usr/include/bits/mathcalls.h"
-	.file	4 "/usr/include/stdlib.h"
-	.file	5 "/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../include/c++/4.8.2/cstdlib"
-	.file	6 "/apps/free/cuda/7.5.18/include/math_functions.hpp"
-	.file	7 "/apps/free/cuda/7.5.18/include/device_functions.hpp"
-	.file	8 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_math_forward_declares.h"
-	.file	9 "/usr/include/bits/mathcalls.h"
-	.file	10 "/usr/include/stdlib.h"
-	.file	11 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/stddef.h"
-	.file	12 "/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../include/c++/4.8.2/bits/cpp_type_traits.h"
-	.file	13 "/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../include/c++/4.8.2/cstdlib"
-	.file	14 "/apps/free/cuda/7.5.18/include/math_functions.hpp"
-	.file	15 "/apps/free/cuda/7.5.18/include/device_functions.hpp"
+	.file	1 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_math_forward_declares.h"
+	.file	2 "/usr/include/bits/mathcalls.h"
+	.file	3 "/usr/include/stdlib.h"
+	.file	4 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/stddef.h"
+	.file	5 "/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../include/c++/4.8.2/bits/cpp_type_traits.h"
+	.file	6 "/opt/rh/devtoolset-2/root/usr/lib/gcc/x86_64-redhat-linux/4.8.2/../../../../include/c++/4.8.2/cstdlib"
+	.file	7 "/apps/free/cuda/7.5.18/include/math_functions.hpp"
+	.file	8 "/apps/free/cuda/7.5.18/include/device_functions.hpp"
 	// .globl	_Z3addPfS_S_
 .global .align 1 .b8 threadIdx[1];
                                         // @_Z3addPfS_S_
@@ -30,8 +23,8 @@
 	.param .u64 _Z3addPfS_S__param_2
 )
 Lfunc_begin0:
-	.file	16 "add.cu"
-	.loc	16 1 0                  // add.cu:1:0
+	.file	9 "add.cu"
+	.loc	9 1 0                   // add.cu:1:0
 {
 	.reg .f32 	%f<4>;
 	.reg .b32 	%r<2>;
@@ -45,33 +38,28 @@ Lfunc_begin0:
 	cvta.to.global.u64 	%rd5, %rd4;
 	cvta.to.global.u64 	%rd6, %rd1;
 Ltmp0:
-	.file	17 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_builtin_vars.h"
-	.loc	17 67 3 prologue_end    // /home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_builtin_vars.h:67:3
+	.file	10 "/home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_builtin_vars.h"
+	.loc	10 67 3 prologue_end    // /home/v/valentin-churavy/.local/bin/../lib/clang/5.0.0/include/__clang_cuda_builtin_vars.h:67:3
 	mov.u32 	%r1, %tid.x;
 	mul.wide.u32 	%rd7, %r1, 4;
 	add.s64 	%rd8, %rd5, %rd7;
 Ltmp1:
-	.loc	16 3 14                 // add.cu:3:14
-	.loc 1 3 14
+	.loc	9 3 14                  // add.cu:3:14
 	ld.global.f32 	%f1, [%rd8];
 	add.s64 	%rd9, %rd3, %rd7;
-	.loc	16 3 22 is_stmt 0       // add.cu:3:22
-	.loc 1 3 22
+	.loc	9 3 22 is_stmt 0        // add.cu:3:22
 	ld.global.f32 	%f2, [%rd9];
-	.loc	16 3 21                 // add.cu:3:21
-	.loc 1 3 21
+	.loc	9 3 21                  // add.cu:3:21
 	add.rn.f32 	%f3, %f1, %f2;
 	add.s64 	%rd10, %rd6, %rd7;
-	.loc	16 3 12                 // add.cu:3:12
-	.loc 1 3 12
+	.loc	9 3 12                  // add.cu:3:12
 	st.global.f32 	[%rd10], %f3;
-	.loc	16 4 1 is_stmt 1        // add.cu:4:1
-	.loc 1 4 1
+	.loc	9 4 1 is_stmt 1         // add.cu:4:1
 	ret;
 Ltmp2:
 }
 Lfunc_end0:
-	.file	18 "/apps/free/cuda/7.5.18/include/vector_types.h"
+	.file	11 "/apps/free/cuda/7.5.18/include/vector_types.h"
 
 Linfo_string0:
  .b8"clang version 5.0.0 (https://github.com/llvm-mirror/clang.git 068460e74885378bade28d1c8184b8867128fd39) (https://github.com/llvm-mirror/llvm.git 8b345aabb9087f7d80d6f678bdadaeed92dc1ae6)" // string offset=0
@@ -1223,781 +1211,781 @@ Lcu_begin0:
  .b64 Lfunc_end0                        // DW_AT_high_pc
  .b8 2                                  // Abbrev [2] 0x2e:0x5a1 DW_TAG_namespace
  .b32 Linfo_string3                     // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 195                                // DW_AT_decl_line
  .b8 3                                  // Abbrev [3] 0x35:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 201                                // DW_AT_decl_line
  .b32 1487                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3c:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 202                                // DW_AT_decl_line
  .b32 1516                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x43:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 203                                // DW_AT_decl_line
  .b32 1545                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x4a:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 204                                // DW_AT_decl_line
  .b32 1567                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x51:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 205                                // DW_AT_decl_line
  .b32 1589                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x58:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 206                                // DW_AT_decl_line
  .b32 1611                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x5f:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 207                                // DW_AT_decl_line
  .b32 1633                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x66:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 208                                // DW_AT_decl_line
  .b32 1660                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x6d:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 209                                // DW_AT_decl_line
  .b32 1682                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x74:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 210                                // DW_AT_decl_line
  .b32 1704                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x7b:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 211                                // DW_AT_decl_line
  .b32 1726                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x82:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 212                                // DW_AT_decl_line
  .b32 1753                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x89:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 213                                // DW_AT_decl_line
  .b32 1775                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x90:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 214                                // DW_AT_decl_line
  .b32 1797                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x97:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 215                                // DW_AT_decl_line
  .b32 1819                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x9e:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 216                                // DW_AT_decl_line
  .b32 1841                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xa5:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 217                                // DW_AT_decl_line
  .b32 1863                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xac:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 218                                // DW_AT_decl_line
  .b32 1885                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xb3:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 219                                // DW_AT_decl_line
  .b32 1907                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xba:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 220                                // DW_AT_decl_line
  .b32 1929                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xc1:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 221                                // DW_AT_decl_line
  .b32 1956                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xc8:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 222                                // DW_AT_decl_line
  .b32 1978                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xcf:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 223                                // DW_AT_decl_line
  .b32 2010                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xd6:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 224                                // DW_AT_decl_line
  .b32 2037                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xdd:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 225                                // DW_AT_decl_line
  .b32 2064                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xe4:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 226                                // DW_AT_decl_line
  .b32 2091                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xeb:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 227                                // DW_AT_decl_line
  .b32 2120                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xf2:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 228                                // DW_AT_decl_line
  .b32 2152                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0xf9:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 229                                // DW_AT_decl_line
  .b32 2179                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x100:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 230                                // DW_AT_decl_line
  .b32 2201                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x107:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 231                                // DW_AT_decl_line
  .b32 2230                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x10e:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 232                                // DW_AT_decl_line
  .b32 2257                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x115:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 233                                // DW_AT_decl_line
  .b32 2284                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11c:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 234                                // DW_AT_decl_line
  .b32 2306                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x123:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 235                                // DW_AT_decl_line
  .b32 2333                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x12a:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 236                                // DW_AT_decl_line
  .b32 2360                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x131:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 237                                // DW_AT_decl_line
  .b32 2387                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x138:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 238                                // DW_AT_decl_line
  .b32 2409                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x13f:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 239                                // DW_AT_decl_line
  .b32 2431                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x146:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 240                                // DW_AT_decl_line
  .b32 2458                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x14d:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 241                                // DW_AT_decl_line
  .b32 2487                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x154:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 242                                // DW_AT_decl_line
  .b32 2514                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x15b:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 243                                // DW_AT_decl_line
  .b32 2536                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x162:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 244                                // DW_AT_decl_line
  .b32 2558                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x169:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 245                                // DW_AT_decl_line
  .b32 2580                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x170:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 246                                // DW_AT_decl_line
  .b32 2602                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x177:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 247                                // DW_AT_decl_line
  .b32 2624                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x17e:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 248                                // DW_AT_decl_line
  .b32 2646                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x185:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 249                                // DW_AT_decl_line
  .b32 2668                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x18c:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 250                                // DW_AT_decl_line
  .b32 2690                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x193:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 251                                // DW_AT_decl_line
  .b32 2712                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x19a:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 252                                // DW_AT_decl_line
  .b32 2734                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x1a1:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 253                                // DW_AT_decl_line
  .b32 2756                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x1a8:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 254                                // DW_AT_decl_line
  .b32 2788                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x1af:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 255                                // DW_AT_decl_line
  .b32 2834                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1b6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 256                               // DW_AT_decl_line
  .b32 2856                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1be:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 257                               // DW_AT_decl_line
  .b32 2878                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1c6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 258                               // DW_AT_decl_line
  .b32 2905                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1ce:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 259                               // DW_AT_decl_line
  .b32 2932                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1d6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 260                               // DW_AT_decl_line
  .b32 2959                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1de:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 261                               // DW_AT_decl_line
  .b32 2986                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1e6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 262                               // DW_AT_decl_line
  .b32 3018                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1ee:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 263                               // DW_AT_decl_line
  .b32 3040                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1f6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 264                               // DW_AT_decl_line
  .b32 3062                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x1fe:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 265                               // DW_AT_decl_line
  .b32 3089                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x206:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 266                               // DW_AT_decl_line
  .b32 3116                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x20e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 267                               // DW_AT_decl_line
  .b32 3138                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x216:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 268                               // DW_AT_decl_line
  .b32 3160                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x21e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 269                               // DW_AT_decl_line
  .b32 3182                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x226:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 270                               // DW_AT_decl_line
  .b32 3204                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x22e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 271                               // DW_AT_decl_line
  .b32 3226                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x236:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 272                               // DW_AT_decl_line
  .b32 3248                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x23e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 273                               // DW_AT_decl_line
  .b32 3270                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x246:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 102                                // DW_AT_decl_line
  .b32 3292                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x24d:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 121                                // DW_AT_decl_line
  .b32 3311                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x254:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 140                                // DW_AT_decl_line
  .b32 3330                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x25b:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 159                                // DW_AT_decl_line
  .b32 3349                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x262:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 180                                // DW_AT_decl_line
  .b32 3373                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x269:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 199                                // DW_AT_decl_line
  .b32 3392                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x270:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 218                                // DW_AT_decl_line
  .b32 3411                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x277:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 237                                // DW_AT_decl_line
  .b32 3430                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x27e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 256                               // DW_AT_decl_line
  .b32 3449                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x286:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 275                               // DW_AT_decl_line
  .b32 3468                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x28e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 294                               // DW_AT_decl_line
  .b32 3487                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x296:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 315                               // DW_AT_decl_line
  .b32 3511                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x29e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 334                               // DW_AT_decl_line
  .b32 3535                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2a6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 353                               // DW_AT_decl_line
  .b32 3559                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2ae:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 372                               // DW_AT_decl_line
  .b32 3578                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2b6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 391                               // DW_AT_decl_line
  .b32 3597                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2be:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 403                               // DW_AT_decl_line
  .b32 3626                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2c6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 440                               // DW_AT_decl_line
  .b32 3650                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2ce:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 459                               // DW_AT_decl_line
  .b32 3669                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2d6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 478                               // DW_AT_decl_line
  .b32 3688                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2de:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 497                               // DW_AT_decl_line
  .b32 3707                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x2e6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 516                               // DW_AT_decl_line
  .b32 3726                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x2ee:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 118                                // DW_AT_decl_line
  .b32 3745                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x2f5:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 119                                // DW_AT_decl_line
  .b32 3758                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x2fc:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 121                                // DW_AT_decl_line
  .b32 3802                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x303:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 122                                // DW_AT_decl_line
  .b32 3813                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x30a:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 123                                // DW_AT_decl_line
  .b32 3833                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x311:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 129                                // DW_AT_decl_line
  .b32 3859                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x318:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 130                                // DW_AT_decl_line
  .b32 3878                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x31f:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 131                                // DW_AT_decl_line
  .b32 3897                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x326:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 132                                // DW_AT_decl_line
  .b32 3916                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x32d:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 133                                // DW_AT_decl_line
  .b32 4014                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x334:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 134                                // DW_AT_decl_line
  .b32 4039                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x33b:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 135                                // DW_AT_decl_line
  .b32 4064                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x342:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 136                                // DW_AT_decl_line
  .b32 4081                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x349:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 137                                // DW_AT_decl_line
  .b32 4097                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x350:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 138                                // DW_AT_decl_line
  .b32 4122                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x357:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 139                                // DW_AT_decl_line
  .b32 4142                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x35e:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 140                                // DW_AT_decl_line
  .b32 4167                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x365:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 142                                // DW_AT_decl_line
  .b32 4187                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x36c:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 143                                // DW_AT_decl_line
  .b32 4212                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x373:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 144                                // DW_AT_decl_line
  .b32 4254                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x37a:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 146                                // DW_AT_decl_line
  .b32 4284                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x381:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 152                                // DW_AT_decl_line
  .b32 4315                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x388:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 153                                // DW_AT_decl_line
  .b32 4329                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x38f:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 154                                // DW_AT_decl_line
  .b32 4354                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x396:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 155                                // DW_AT_decl_line
  .b32 4377                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x39d:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 156                                // DW_AT_decl_line
  .b32 4406                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3a4:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 157                                // DW_AT_decl_line
  .b32 4435                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3ab:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 158                                // DW_AT_decl_line
  .b32 4464                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3b2:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 160                                // DW_AT_decl_line
  .b32 4484                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3b9:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 161                                // DW_AT_decl_line
  .b32 4524                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3c0:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 241                                // DW_AT_decl_line
  .b32 4648                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3c7:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 243                                // DW_AT_decl_line
  .b32 4692                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3ce:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 245                                // DW_AT_decl_line
  .b32 4709                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3d5:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 246                                // DW_AT_decl_line
  .b32 4619                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3dc:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 247                                // DW_AT_decl_line
  .b32 4729                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3e3:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 249                                // DW_AT_decl_line
  .b32 4754                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3ea:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 250                                // DW_AT_decl_line
  .b32 4838                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3f1:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 251                                // DW_AT_decl_line
  .b32 4773                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3f8:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 252                                // DW_AT_decl_line
  .b32 4802                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x3ff:0x7 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 253                                // DW_AT_decl_line
  .b32 4862                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x406:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 418                               // DW_AT_decl_line
  .b32 4893                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x40e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 419                               // DW_AT_decl_line
  .b32 4916                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x416:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 420                               // DW_AT_decl_line
  .b32 4939                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x41e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 421                               // DW_AT_decl_line
  .b32 4962                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x426:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 422                               // DW_AT_decl_line
  .b32 4985                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x42e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 423                               // DW_AT_decl_line
  .b32 5013                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x436:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 424                               // DW_AT_decl_line
  .b32 5036                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x43e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 425                               // DW_AT_decl_line
  .b32 5059                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x446:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 426                               // DW_AT_decl_line
  .b32 5082                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x44e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 427                               // DW_AT_decl_line
  .b32 5105                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x456:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 428                               // DW_AT_decl_line
  .b32 5133                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x45e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 429                               // DW_AT_decl_line
  .b32 5156                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x466:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 430                               // DW_AT_decl_line
  .b32 5179                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x46e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 431                               // DW_AT_decl_line
  .b32 5202                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x476:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 432                               // DW_AT_decl_line
  .b32 5225                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x47e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 433                               // DW_AT_decl_line
  .b32 5248                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x486:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 434                               // DW_AT_decl_line
  .b32 5271                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x48e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 435                               // DW_AT_decl_line
  .b32 5294                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x496:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 436                               // DW_AT_decl_line
  .b32 5317                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x49e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 437                               // DW_AT_decl_line
  .b32 5345                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4a6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 438                               // DW_AT_decl_line
  .b32 5368                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4ae:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 439                               // DW_AT_decl_line
  .b32 5401                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4b6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 440                               // DW_AT_decl_line
  .b32 5429                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4be:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 441                               // DW_AT_decl_line
  .b32 5457                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4c6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 442                               // DW_AT_decl_line
  .b32 5485                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4ce:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 443                               // DW_AT_decl_line
  .b32 5513                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4d6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 444                               // DW_AT_decl_line
  .b32 5541                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4de:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 445                               // DW_AT_decl_line
  .b32 5564                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4e6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 446                               // DW_AT_decl_line
  .b32 5592                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4ee:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 447                               // DW_AT_decl_line
  .b32 5615                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4f6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 448                               // DW_AT_decl_line
  .b32 5638                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x4fe:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 449                               // DW_AT_decl_line
  .b32 5661                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x506:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 450                               // DW_AT_decl_line
  .b32 5684                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x50e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 451                               // DW_AT_decl_line
  .b32 5707                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x516:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 452                               // DW_AT_decl_line
  .b32 5730                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x51e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 453                               // DW_AT_decl_line
  .b32 5753                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x526:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 454                               // DW_AT_decl_line
  .b32 5776                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x52e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 455                               // DW_AT_decl_line
  .b32 5799                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x536:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 456                               // DW_AT_decl_line
  .b32 5822                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x53e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 457                               // DW_AT_decl_line
  .b32 5850                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x546:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 458                               // DW_AT_decl_line
  .b32 5873                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x54e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 459                               // DW_AT_decl_line
  .b32 5901                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x556:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 460                               // DW_AT_decl_line
  .b32 5901                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x55e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 461                               // DW_AT_decl_line
  .b32 5926                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x566:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 462                               // DW_AT_decl_line
  .b32 5954                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x56e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 463                               // DW_AT_decl_line
  .b32 5982                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x576:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 464                               // DW_AT_decl_line
  .b32 6015                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x57e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 465                               // DW_AT_decl_line
  .b32 6038                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x586:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 466                               // DW_AT_decl_line
  .b32 6061                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x58e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 467                               // DW_AT_decl_line
  .b32 6089                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x596:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 468                               // DW_AT_decl_line
  .b32 6117                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x59e:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 469                               // DW_AT_decl_line
  .b32 6140                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x5a6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 470                               // DW_AT_decl_line
  .b32 6163                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x5ae:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 471                               // DW_AT_decl_line
  .b32 6186                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x5b6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 472                               // DW_AT_decl_line
  .b32 6209                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x5be:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 473                               // DW_AT_decl_line
  .b32 6232                              // DW_AT_import
  .b8 4                                  // Abbrev [4] 0x5c6:0x8 DW_TAG_imported_declaration
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b16 474                               // DW_AT_decl_line
  .b32 6255                              // DW_AT_import
  .b8 0                                  // End Of Children Mark
  .b8 5                                  // Abbrev [5] 0x5cf:0x16 DW_TAG_subprogram
  .b32 Linfo_string4                     // DW_AT_MIPS_linkage_name
  .b32 Linfo_string5                     // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 44                                 // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2011,7 +1999,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x5ec:0x16 DW_TAG_subprogram
  .b32 Linfo_string7                     // DW_AT_MIPS_linkage_name
  .b32 Linfo_string8                     // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 46                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2025,7 +2013,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x609:0x16 DW_TAG_subprogram
  .b32 Linfo_string10                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string11                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 48                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2035,7 +2023,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x61f:0x16 DW_TAG_subprogram
  .b32 Linfo_string12                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string13                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 50                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2045,7 +2033,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x635:0x16 DW_TAG_subprogram
  .b32 Linfo_string14                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string15                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 52                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2055,7 +2043,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x64b:0x16 DW_TAG_subprogram
  .b32 Linfo_string16                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string17                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 56                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2065,7 +2053,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x661:0x1b DW_TAG_subprogram
  .b32 Linfo_string18                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string19                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 54                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2077,7 +2065,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x67c:0x16 DW_TAG_subprogram
  .b32 Linfo_string20                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string21                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 58                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2087,7 +2075,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x692:0x16 DW_TAG_subprogram
  .b32 Linfo_string22                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string23                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 60                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2097,7 +2085,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x6a8:0x16 DW_TAG_subprogram
  .b32 Linfo_string24                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string25                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 62                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2107,7 +2095,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x6be:0x1b DW_TAG_subprogram
  .b32 Linfo_string26                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string27                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 64                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2119,7 +2107,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x6d9:0x16 DW_TAG_subprogram
  .b32 Linfo_string28                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string29                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 66                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2129,7 +2117,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x6ef:0x16 DW_TAG_subprogram
  .b32 Linfo_string30                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string31                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 68                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2139,7 +2127,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x705:0x16 DW_TAG_subprogram
  .b32 Linfo_string32                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string33                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 72                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2149,7 +2137,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x71b:0x16 DW_TAG_subprogram
  .b32 Linfo_string34                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string35                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 70                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2159,7 +2147,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x731:0x16 DW_TAG_subprogram
  .b32 Linfo_string36                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string37                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 76                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2169,7 +2157,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x747:0x16 DW_TAG_subprogram
  .b32 Linfo_string38                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string39                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 74                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2179,7 +2167,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x75d:0x16 DW_TAG_subprogram
  .b32 Linfo_string40                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string41                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 78                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2189,7 +2177,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x773:0x16 DW_TAG_subprogram
  .b32 Linfo_string42                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string43                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 80                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2199,7 +2187,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x789:0x1b DW_TAG_subprogram
  .b32 Linfo_string44                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string45                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 82                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2211,7 +2199,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x7a4:0x16 DW_TAG_subprogram
  .b32 Linfo_string46                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string47                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 84                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2221,7 +2209,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x7ba:0x20 DW_TAG_subprogram
  .b32 Linfo_string48                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string49                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 86                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2235,7 +2223,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x7da:0x1b DW_TAG_subprogram
  .b32 Linfo_string50                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string51                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 88                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2247,7 +2235,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x7f5:0x1b DW_TAG_subprogram
  .b32 Linfo_string52                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string53                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 90                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2259,7 +2247,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x810:0x1b DW_TAG_subprogram
  .b32 Linfo_string54                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string55                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 92                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2271,7 +2259,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x82b:0x16 DW_TAG_subprogram
  .b32 Linfo_string56                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string57                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 94                                 // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2285,7 +2273,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x848:0x1b DW_TAG_subprogram
  .b32 Linfo_string59                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string60                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 96                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2299,7 +2287,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x868:0x1b DW_TAG_subprogram
  .b32 Linfo_string61                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string62                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 98                                 // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2311,7 +2299,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x883:0x16 DW_TAG_subprogram
  .b32 Linfo_string63                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string64                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 100                                // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2321,7 +2309,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x899:0x16 DW_TAG_subprogram
  .b32 Linfo_string65                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string66                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 102                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2335,7 +2323,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x8b6:0x1b DW_TAG_subprogram
  .b32 Linfo_string68                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string69                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 106                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2347,7 +2335,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x8d1:0x1b DW_TAG_subprogram
  .b32 Linfo_string70                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string71                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 105                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2359,7 +2347,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x8ec:0x16 DW_TAG_subprogram
  .b32 Linfo_string72                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string73                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 108                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2369,7 +2357,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x902:0x1b DW_TAG_subprogram
  .b32 Linfo_string74                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string75                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 112                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2381,7 +2369,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x91d:0x1b DW_TAG_subprogram
  .b32 Linfo_string76                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string77                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 111                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2393,7 +2381,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x938:0x1b DW_TAG_subprogram
  .b32 Linfo_string78                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string79                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 114                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2405,7 +2393,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x953:0x16 DW_TAG_subprogram
  .b32 Linfo_string80                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string81                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 116                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2415,7 +2403,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x969:0x16 DW_TAG_subprogram
  .b32 Linfo_string82                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string83                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 118                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2425,7 +2413,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x97f:0x1b DW_TAG_subprogram
  .b32 Linfo_string84                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string85                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 120                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2437,7 +2425,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x99a:0x16 DW_TAG_subprogram
  .b32 Linfo_string86                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string87                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 121                                // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2451,7 +2439,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x9b7:0x1b DW_TAG_subprogram
  .b32 Linfo_string89                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string90                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 123                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2463,7 +2451,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x9d2:0x16 DW_TAG_subprogram
  .b32 Linfo_string91                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string92                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 125                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2473,7 +2461,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x9e8:0x16 DW_TAG_subprogram
  .b32 Linfo_string93                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string94                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 126                                // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2483,7 +2471,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0x9fe:0x16 DW_TAG_subprogram
  .b32 Linfo_string95                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string96                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 128                                // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2493,7 +2481,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa14:0x16 DW_TAG_subprogram
  .b32 Linfo_string97                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string98                    // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 138                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2503,7 +2491,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa2a:0x16 DW_TAG_subprogram
  .b32 Linfo_string99                    // DW_AT_MIPS_linkage_name
  .b32 Linfo_string100                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 130                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2513,7 +2501,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa40:0x16 DW_TAG_subprogram
  .b32 Linfo_string101                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string102                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 132                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2523,7 +2511,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa56:0x16 DW_TAG_subprogram
  .b32 Linfo_string103                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string104                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 134                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2533,7 +2521,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa6c:0x16 DW_TAG_subprogram
  .b32 Linfo_string105                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string106                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 136                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2543,7 +2531,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa82:0x16 DW_TAG_subprogram
  .b32 Linfo_string107                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string108                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 140                                // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2553,7 +2541,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xa98:0x16 DW_TAG_subprogram
  .b32 Linfo_string109                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string110                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 142                                // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2563,7 +2551,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xaae:0x16 DW_TAG_subprogram
  .b32 Linfo_string111                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string112                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 143                                // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2573,7 +2561,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xac4:0x1b DW_TAG_subprogram
  .b32 Linfo_string113                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string114                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 145                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2587,7 +2575,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xae4:0x16 DW_TAG_subprogram
  .b32 Linfo_string115                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string116                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 146                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2609,7 +2597,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xb12:0x16 DW_TAG_subprogram
  .b32 Linfo_string119                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string120                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 147                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2619,7 +2607,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xb28:0x16 DW_TAG_subprogram
  .b32 Linfo_string121                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string122                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 149                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2629,7 +2617,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xb3e:0x1b DW_TAG_subprogram
  .b32 Linfo_string123                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string124                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 151                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2641,7 +2629,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xb59:0x1b DW_TAG_subprogram
  .b32 Linfo_string125                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string126                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 153                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2653,7 +2641,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xb74:0x1b DW_TAG_subprogram
  .b32 Linfo_string127                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string128                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 158                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2665,7 +2653,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xb8f:0x1b DW_TAG_subprogram
  .b32 Linfo_string129                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string130                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 160                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2677,7 +2665,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xbaa:0x20 DW_TAG_subprogram
  .b32 Linfo_string131                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string132                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 162                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2691,7 +2679,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xbca:0x16 DW_TAG_subprogram
  .b32 Linfo_string133                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string134                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 164                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2701,7 +2689,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xbe0:0x16 DW_TAG_subprogram
  .b32 Linfo_string135                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string136                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 166                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2711,7 +2699,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xbf6:0x1b DW_TAG_subprogram
  .b32 Linfo_string137                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string138                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 168                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2723,7 +2711,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc11:0x1b DW_TAG_subprogram
  .b32 Linfo_string139                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string140                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 170                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2735,7 +2723,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc2c:0x16 DW_TAG_subprogram
  .b32 Linfo_string141                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string142                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 172                                // DW_AT_decl_line
  .b32 2223                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2745,7 +2733,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc42:0x16 DW_TAG_subprogram
  .b32 Linfo_string143                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string144                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 174                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2755,7 +2743,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc58:0x16 DW_TAG_subprogram
  .b32 Linfo_string145                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string146                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 176                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2765,7 +2753,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc6e:0x16 DW_TAG_subprogram
  .b32 Linfo_string147                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string148                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 178                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2775,7 +2763,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc84:0x16 DW_TAG_subprogram
  .b32 Linfo_string149                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string150                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 180                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2785,7 +2773,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xc9a:0x16 DW_TAG_subprogram
  .b32 Linfo_string151                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string152                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 182                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2795,7 +2783,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xcb0:0x16 DW_TAG_subprogram
  .b32 Linfo_string153                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string154                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 184                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2805,7 +2793,7 @@ Lcu_begin0:
  .b8 5                                  // Abbrev [5] 0xcc6:0x16 DW_TAG_subprogram
  .b32 Linfo_string155                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string156                   // DW_AT_name
- .b8 8                                  // DW_AT_decl_file
+ .b8 1                                  // DW_AT_decl_file
  .b8 186                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2814,7 +2802,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xcdc:0x13 DW_TAG_subprogram
  .b32 Linfo_string8                     // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 55                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2824,7 +2812,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xcef:0x13 DW_TAG_subprogram
  .b32 Linfo_string13                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 57                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2834,7 +2822,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd02:0x13 DW_TAG_subprogram
  .b32 Linfo_string17                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 59                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2844,7 +2832,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd15:0x18 DW_TAG_subprogram
  .b32 Linfo_string19                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 61                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2856,7 +2844,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd2d:0x13 DW_TAG_subprogram
  .b32 Linfo_string25                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 179                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2866,7 +2854,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd40:0x13 DW_TAG_subprogram
  .b32 Linfo_string29                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 64                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2876,7 +2864,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd53:0x13 DW_TAG_subprogram
  .b32 Linfo_string31                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 73                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2886,7 +2874,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd66:0x13 DW_TAG_subprogram
  .b32 Linfo_string37                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 101                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2896,7 +2884,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd79:0x13 DW_TAG_subprogram
  .b32 Linfo_string43                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 182                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2906,7 +2894,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd8c:0x13 DW_TAG_subprogram
  .b32 Linfo_string47                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 185                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2916,7 +2904,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xd9f:0x18 DW_TAG_subprogram
  .b32 Linfo_string55                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 188                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2928,7 +2916,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xdb7:0x18 DW_TAG_subprogram
  .b32 Linfo_string60                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 104                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2940,7 +2928,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xdcf:0x18 DW_TAG_subprogram
  .b32 Linfo_string90                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 107                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2952,7 +2940,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xde7:0x13 DW_TAG_subprogram
  .b32 Linfo_string98                    // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 110                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2962,7 +2950,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xdfa:0x13 DW_TAG_subprogram
  .b32 Linfo_string100                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 113                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2972,7 +2960,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xe0d:0x18 DW_TAG_subprogram
  .b32 Linfo_string114                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 116                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2986,7 +2974,7 @@ Lcu_begin0:
  .b32 2810                              // DW_AT_type
  .b8 10                                 // Abbrev [10] 0xe2a:0x18 DW_TAG_subprogram
  .b32 Linfo_string128                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 154                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -2998,7 +2986,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xe42:0x13 DW_TAG_subprogram
  .b32 Linfo_string144                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 66                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3008,7 +2996,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xe55:0x13 DW_TAG_subprogram
  .b32 Linfo_string146                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 75                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3018,7 +3006,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xe68:0x13 DW_TAG_subprogram
  .b32 Linfo_string148                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 157                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3028,7 +3016,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xe7b:0x13 DW_TAG_subprogram
  .b32 Linfo_string150                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 68                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3038,7 +3026,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xe8e:0x13 DW_TAG_subprogram
  .b32 Linfo_string152                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b8 77                                 // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3049,23 +3037,23 @@ Lcu_begin0:
  .b8 11                                 // Abbrev [11] 0xea1:0xb DW_TAG_typedef
  .b32 3756                              // DW_AT_type
  .b32 Linfo_string157                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 102                                // DW_AT_decl_line
  .b8 12                                 // Abbrev [12] 0xeac:0x2 DW_TAG_structure_type
  .b8 1                                  // DW_AT_declaration
  .b8 11                                 // Abbrev [11] 0xeae:0xb DW_TAG_typedef
  .b32 3769                              // DW_AT_type
  .b32 Linfo_string160                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 110                                // DW_AT_decl_line
  .b8 13                                 // Abbrev [13] 0xeb9:0x21 DW_TAG_structure_type
  .b8 16                                 // DW_AT_byte_size
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 106                                // DW_AT_decl_line
  .b8 14                                 // Abbrev [14] 0xebd:0xe DW_TAG_member
  .b32 Linfo_string158                   // DW_AT_name
  .b32 2480                              // DW_AT_type
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 108                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -3073,7 +3061,7 @@ Lcu_begin0:
  .b8 14                                 // Abbrev [14] 0xecb:0xe DW_TAG_member
  .b32 Linfo_string159                   // DW_AT_name
  .b32 2480                              // DW_AT_type
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 109                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -3081,14 +3069,14 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 15                                 // Abbrev [15] 0xeda:0xb DW_TAG_subprogram
  .b32 Linfo_string161                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 514                               // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
  .b8 1                                  // DW_AT_noreturn
  .b8 16                                 // Abbrev [16] 0xee5:0x14 DW_TAG_subprogram
  .b32 Linfo_string5                     // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 771                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3098,7 +3086,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0xef9:0x14 DW_TAG_subprogram
  .b32 Linfo_string162                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 518                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3111,7 +3099,7 @@ Lcu_begin0:
  .b8 17                                 // Abbrev [17] 0xf12:0x1 DW_TAG_subroutine_type
  .b8 10                                 // Abbrev [10] 0xf13:0x13 DW_TAG_subprogram
  .b32 Linfo_string163                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 145                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3121,7 +3109,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xf26:0x13 DW_TAG_subprogram
  .b32 Linfo_string164                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 148                                // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3131,7 +3119,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0xf39:0x13 DW_TAG_subprogram
  .b32 Linfo_string165                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 151                                // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3141,7 +3129,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0xf4c:0x28 DW_TAG_subprogram
  .b32 Linfo_string166                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 755                               // DW_AT_decl_line
  .b32 3956                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3164,7 +3152,7 @@ Lcu_begin0:
  .b8 11                                 // Abbrev [11] 0xf7b:0xb DW_TAG_typedef
  .b32 3974                              // DW_AT_type
  .b32 Linfo_string168                   // DW_AT_name
- .b8 11                                 // DW_AT_decl_file
+ .b8 4                                  // DW_AT_decl_file
  .b8 62                                 // DW_AT_decl_line
  .b8 7                                  // Abbrev [7] 0xf86:0x7 DW_TAG_base_type
  .b32 Linfo_string167                   // DW_AT_name
@@ -3173,7 +3161,7 @@ Lcu_begin0:
  .b8 20                                 // Abbrev [20] 0xf8d:0xc DW_TAG_typedef
  .b32 3993                              // DW_AT_type
  .b32 Linfo_string169                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 742                               // DW_AT_decl_line
  .b8 8                                  // Abbrev [8] 0xf99:0x5 DW_TAG_pointer_type
  .b32 3998                              // DW_AT_type
@@ -3186,7 +3174,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0xfae:0x19 DW_TAG_subprogram
  .b32 Linfo_string170                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 473                               // DW_AT_decl_line
  .b32 3956                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3198,7 +3186,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0xfc7:0x19 DW_TAG_subprogram
  .b32 Linfo_string171                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 785                               // DW_AT_decl_line
  .b32 3745                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3210,7 +3198,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 22                                 // Abbrev [22] 0xfe0:0x11 DW_TAG_subprogram
  .b32 Linfo_string172                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 544                               // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -3220,7 +3208,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 23                                 // Abbrev [23] 0xff1:0x10 DW_TAG_subprogram
  .b32 Linfo_string173                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 488                               // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -3229,7 +3217,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1001:0x14 DW_TAG_subprogram
  .b32 Linfo_string174                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 567                               // DW_AT_decl_line
  .b32 4117                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3241,7 +3229,7 @@ Lcu_begin0:
  .b32 2827                              // DW_AT_type
  .b8 16                                 // Abbrev [16] 0x101a:0x14 DW_TAG_subprogram
  .b32 Linfo_string87                    // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 772                               // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3251,7 +3239,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x102e:0x19 DW_TAG_subprogram
  .b32 Linfo_string175                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 787                               // DW_AT_decl_line
  .b32 3758                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3263,7 +3251,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1047:0x14 DW_TAG_subprogram
  .b32 Linfo_string176                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 471                               // DW_AT_decl_line
  .b32 3956                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3273,7 +3261,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x105b:0x19 DW_TAG_subprogram
  .b32 Linfo_string177                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 860                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3285,7 +3273,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1074:0x1e DW_TAG_subprogram
  .b32 Linfo_string178                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 871                               // DW_AT_decl_line
  .b32 3963                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3305,7 +3293,7 @@ Lcu_begin0:
  .b8 4                                  // DW_AT_byte_size
  .b8 16                                 // Abbrev [16] 0x109e:0x1e DW_TAG_subprogram
  .b32 Linfo_string180                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 863                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3319,7 +3307,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 23                                 // Abbrev [23] 0x10bc:0x1f DW_TAG_subprogram
  .b32 Linfo_string181                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 761                               // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -3334,14 +3322,14 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 24                                 // Abbrev [24] 0x10db:0xe DW_TAG_subprogram
  .b32 Linfo_string182                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 380                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
  .b8 16                                 // Abbrev [16] 0x10e9:0x19 DW_TAG_subprogram
  .b32 Linfo_string183                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 485                               // DW_AT_decl_line
  .b32 3956                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3353,7 +3341,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 23                                 // Abbrev [23] 0x1102:0x10 DW_TAG_subprogram
  .b32 Linfo_string184                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 382                               // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -3366,7 +3354,7 @@ Lcu_begin0:
  .b8 4                                  // DW_AT_byte_size
  .b8 10                                 // Abbrev [10] 0x1119:0x18 DW_TAG_subprogram
  .b32 Linfo_string186                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 165                                // DW_AT_decl_line
  .b32 2810                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3380,7 +3368,7 @@ Lcu_begin0:
  .b32 4117                              // DW_AT_type
  .b8 10                                 // Abbrev [10] 0x1136:0x1d DW_TAG_subprogram
  .b32 Linfo_string187                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 184                                // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3394,7 +3382,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0x1153:0x1d DW_TAG_subprogram
  .b32 Linfo_string188                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 188                                // DW_AT_decl_line
  .b32 3974                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3408,7 +3396,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1170:0x14 DW_TAG_subprogram
  .b32 Linfo_string189                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 717                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3418,7 +3406,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1184:0x1e DW_TAG_subprogram
  .b32 Linfo_string190                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 874                               // DW_AT_decl_line
  .b32 3963                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3436,7 +3424,7 @@ Lcu_begin0:
  .b32 4247                              // DW_AT_type
  .b8 16                                 // Abbrev [16] 0x11ac:0x19 DW_TAG_subprogram
  .b32 Linfo_string191                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 867                               // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3448,48 +3436,48 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 2                                  // Abbrev [2] 0x11c5:0x63 DW_TAG_namespace
  .b32 Linfo_string192                   // DW_AT_name
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 68                                 // DW_AT_decl_line
  .b8 3                                  // Abbrev [3] 0x11cc:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 201                                // DW_AT_decl_line
  .b32 4648                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11d3:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 207                                // DW_AT_decl_line
  .b32 4692                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11da:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 211                                // DW_AT_decl_line
  .b32 4709                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11e1:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 217                                // DW_AT_decl_line
  .b32 4729                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11e8:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 228                                // DW_AT_decl_line
  .b32 4754                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11ef:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 229                                // DW_AT_decl_line
  .b32 4773                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11f6:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 230                                // DW_AT_decl_line
  .b32 4802                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x11fd:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 232                                // DW_AT_decl_line
  .b32 4838                              // DW_AT_import
  .b8 3                                  // Abbrev [3] 0x1204:0x7 DW_TAG_imported_declaration
- .b8 12                                 // DW_AT_decl_file
+ .b8 5                                  // DW_AT_decl_file
  .b8 233                                // DW_AT_decl_line
  .b32 4862                              // DW_AT_import
  .b8 25                                 // Abbrev [25] 0x120b:0x1c DW_TAG_subprogram
  .b32 Linfo_string203                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string171                   // DW_AT_name
- .b8 13                                 // DW_AT_decl_file
+ .b8 6                                  // DW_AT_decl_file
  .b8 214                                // DW_AT_decl_line
  .b32 4648                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3503,16 +3491,16 @@ Lcu_begin0:
  .b8 11                                 // Abbrev [11] 0x1228:0xb DW_TAG_typedef
  .b32 4659                              // DW_AT_type
  .b32 Linfo_string193                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 122                                // DW_AT_decl_line
  .b8 13                                 // Abbrev [13] 0x1233:0x21 DW_TAG_structure_type
  .b8 16                                 // DW_AT_byte_size
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 118                                // DW_AT_decl_line
  .b8 14                                 // Abbrev [14] 0x1237:0xe DW_TAG_member
  .b32 Linfo_string158                   // DW_AT_name
  .b32 1509                              // DW_AT_type
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 120                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -3520,7 +3508,7 @@ Lcu_begin0:
  .b8 14                                 // Abbrev [14] 0x1245:0xe DW_TAG_member
  .b32 Linfo_string159                   // DW_AT_name
  .b32 1509                              // DW_AT_type
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 121                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -3528,7 +3516,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 22                                 // Abbrev [22] 0x1254:0x11 DW_TAG_subprogram
  .b32 Linfo_string194                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 560                               // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -3538,7 +3526,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1265:0x14 DW_TAG_subprogram
  .b32 Linfo_string94                    // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 776                               // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3548,7 +3536,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x1279:0x19 DW_TAG_subprogram
  .b32 Linfo_string195                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b16 793                               // DW_AT_decl_line
  .b32 4648                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3560,7 +3548,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0x1292:0x13 DW_TAG_subprogram
  .b32 Linfo_string196                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 158                                // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3570,7 +3558,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0x12a5:0x1d DW_TAG_subprogram
  .b32 Linfo_string197                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 210                                // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3584,7 +3572,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0x12c2:0x1d DW_TAG_subprogram
  .b32 Linfo_string198                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 215                                // DW_AT_decl_line
  .b32 4831                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3602,7 +3590,7 @@ Lcu_begin0:
  .b8 8                                  // DW_AT_byte_size
  .b8 10                                 // Abbrev [10] 0x12e6:0x18 DW_TAG_subprogram
  .b32 Linfo_string200                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 173                                // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3614,7 +3602,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 10                                 // Abbrev [10] 0x12fe:0x18 DW_TAG_subprogram
  .b32 Linfo_string201                   // DW_AT_name
- .b8 10                                 // DW_AT_decl_file
+ .b8 3                                  // DW_AT_decl_file
  .b8 176                                // DW_AT_decl_line
  .b32 4886                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3631,7 +3619,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x131d:0x17 DW_TAG_subprogram
  .b32 Linfo_string204                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string205                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1300                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3641,7 +3629,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1334:0x17 DW_TAG_subprogram
  .b32 Linfo_string206                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string207                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1328                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3651,7 +3639,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x134b:0x17 DW_TAG_subprogram
  .b32 Linfo_string208                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string209                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1295                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3661,7 +3649,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1362:0x17 DW_TAG_subprogram
  .b32 Linfo_string210                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string211                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1333                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3671,7 +3659,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1379:0x1c DW_TAG_subprogram
  .b32 Linfo_string212                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string213                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1285                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3683,7 +3671,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1395:0x17 DW_TAG_subprogram
  .b32 Linfo_string214                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string215                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1290                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3693,7 +3681,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x13ac:0x17 DW_TAG_subprogram
  .b32 Linfo_string216                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string217                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1338                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3703,7 +3691,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x13c3:0x17 DW_TAG_subprogram
  .b32 Linfo_string218                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string219                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1388                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3713,7 +3701,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x13da:0x17 DW_TAG_subprogram
  .b32 Linfo_string220                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string221                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 667                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3723,7 +3711,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x13f1:0x1c DW_TAG_subprogram
  .b32 Linfo_string222                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string223                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1147                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3735,7 +3723,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x140d:0x17 DW_TAG_subprogram
  .b32 Linfo_string224                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string225                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1201                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3745,7 +3733,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1424:0x17 DW_TAG_subprogram
  .b32 Linfo_string226                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string227                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1270                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3755,7 +3743,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x143b:0x17 DW_TAG_subprogram
  .b32 Linfo_string228                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string229                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1448                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3765,7 +3753,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1452:0x17 DW_TAG_subprogram
  .b32 Linfo_string230                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string231                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1438                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3775,7 +3763,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1469:0x17 DW_TAG_subprogram
  .b32 Linfo_string232                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string233                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 657                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3785,7 +3773,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1480:0x17 DW_TAG_subprogram
  .b32 Linfo_string234                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string235                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1252                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3795,7 +3783,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1497:0x17 DW_TAG_subprogram
  .b32 Linfo_string236                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string237                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1343                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3805,7 +3793,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x14ae:0x17 DW_TAG_subprogram
  .b32 Linfo_string238                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string239                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 607                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3815,7 +3803,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x14c5:0x1c DW_TAG_subprogram
  .b32 Linfo_string240                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string241                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1574                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3827,7 +3815,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x14e1:0x17 DW_TAG_subprogram
  .b32 Linfo_string242                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string243                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 597                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3837,7 +3825,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x14f8:0x21 DW_TAG_subprogram
  .b32 Linfo_string244                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string245                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1526                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3851,7 +3839,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1519:0x1c DW_TAG_subprogram
  .b32 Linfo_string246                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string247                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 622                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3863,7 +3851,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1535:0x1c DW_TAG_subprogram
  .b32 Linfo_string248                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string249                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 617                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3875,7 +3863,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1551:0x1c DW_TAG_subprogram
  .b32 Linfo_string250                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string251                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1511                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3887,7 +3875,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x156d:0x1c DW_TAG_subprogram
  .b32 Linfo_string252                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string253                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1501                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3899,7 +3887,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1589:0x1c DW_TAG_subprogram
  .b32 Linfo_string254                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string255                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1348                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3911,7 +3899,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x15a5:0x17 DW_TAG_subprogram
  .b32 Linfo_string256                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string257                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1579                              // DW_AT_decl_line
  .b32 2113                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3921,7 +3909,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x15bc:0x1c DW_TAG_subprogram
  .b32 Linfo_string258                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string259                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1478                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3933,7 +3921,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x15d8:0x17 DW_TAG_subprogram
  .b32 Linfo_string260                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string261                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1473                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3943,7 +3931,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x15ef:0x17 DW_TAG_subprogram
  .b32 Linfo_string262                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string263                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1107                              // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3953,7 +3941,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1606:0x17 DW_TAG_subprogram
  .b32 Linfo_string264                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string265                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1560                              // DW_AT_decl_line
  .b32 1509                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3963,7 +3951,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x161d:0x17 DW_TAG_subprogram
  .b32 Linfo_string266                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string267                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1314                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3973,7 +3961,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1634:0x17 DW_TAG_subprogram
  .b32 Linfo_string268                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string269                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1323                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3983,7 +3971,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x164b:0x17 DW_TAG_subprogram
  .b32 Linfo_string270                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string271                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1243                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -3993,7 +3981,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1662:0x17 DW_TAG_subprogram
  .b32 Linfo_string272                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string273                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1584                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4003,7 +3991,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1679:0x17 DW_TAG_subprogram
  .b32 Linfo_string274                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string275                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1305                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4013,7 +4001,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1690:0x17 DW_TAG_subprogram
  .b32 Linfo_string276                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string277                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1098                              // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4023,7 +4011,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x16a7:0x17 DW_TAG_subprogram
  .b32 Linfo_string278                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string279                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1565                              // DW_AT_decl_line
  .b32 2480                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4033,7 +4021,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x16be:0x1c DW_TAG_subprogram
  .b32 Linfo_string280                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string281                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1506                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4045,7 +4033,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x16da:0x17 DW_TAG_subprogram
  .b32 Linfo_string282                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string283                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1112                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4055,7 +4043,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x16f1:0x1c DW_TAG_subprogram
  .b32 Linfo_string284                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string285                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1176                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4066,7 +4054,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 16                                 // Abbrev [16] 0x170d:0x19 DW_TAG_subprogram
  .b32 Linfo_string286                   // DW_AT_name
- .b8 9                                  // DW_AT_decl_file
+ .b8 2                                  // DW_AT_decl_file
  .b16 285                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4079,7 +4067,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1726:0x1c DW_TAG_subprogram
  .b32 Linfo_string287                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string288                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1541                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4091,7 +4079,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1742:0x1c DW_TAG_subprogram
  .b32 Linfo_string289                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string290                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1516                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4103,7 +4091,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x175e:0x21 DW_TAG_subprogram
  .b32 Linfo_string291                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string292                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1521                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4117,7 +4105,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x177f:0x17 DW_TAG_subprogram
  .b32 Linfo_string293                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string294                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1093                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4127,7 +4115,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1796:0x17 DW_TAG_subprogram
  .b32 Linfo_string295                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string296                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1555                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4137,7 +4125,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x17ad:0x1c DW_TAG_subprogram
  .b32 Linfo_string297                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string298                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1488                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4149,7 +4137,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x17c9:0x1c DW_TAG_subprogram
  .b32 Linfo_string299                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string300                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1483                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4161,7 +4149,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x17e5:0x17 DW_TAG_subprogram
  .b32 Linfo_string301                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string302                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1192                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4171,7 +4159,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x17fc:0x17 DW_TAG_subprogram
  .b32 Linfo_string303                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string304                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1275                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4181,7 +4169,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1813:0x17 DW_TAG_subprogram
  .b32 Linfo_string305                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string306                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 907                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4191,7 +4179,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x182a:0x17 DW_TAG_subprogram
  .b32 Linfo_string307                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string308                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1234                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4201,7 +4189,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1841:0x17 DW_TAG_subprogram
  .b32 Linfo_string309                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string310                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1280                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4211,7 +4199,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x1858:0x17 DW_TAG_subprogram
  .b32 Linfo_string311                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string312                   // DW_AT_name
- .b8 14                                 // DW_AT_decl_file
+ .b8 7                                  // DW_AT_decl_file
  .b16 1550                              // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4221,7 +4209,7 @@ Lcu_begin0:
  .b8 26                                 // Abbrev [26] 0x186f:0x17 DW_TAG_subprogram
  .b32 Linfo_string313                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string314                   // DW_AT_name
- .b8 15                                 // DW_AT_decl_file
+ .b8 8                                  // DW_AT_decl_file
  .b16 662                               // DW_AT_decl_line
  .b32 1538                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4231,12 +4219,12 @@ Lcu_begin0:
  .b8 27                                 // Abbrev [27] 0x1886:0xae DW_TAG_structure_type
  .b32 Linfo_string327                   // DW_AT_name
  .b8 1                                  // DW_AT_byte_size
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 66                                 // DW_AT_decl_line
  .b8 28                                 // Abbrev [28] 0x188e:0x11 DW_TAG_subprogram
  .b32 Linfo_string315                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string316                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 67                                 // DW_AT_decl_line
  .b32 4370                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4244,7 +4232,7 @@ Lcu_begin0:
  .b8 28                                 // Abbrev [28] 0x189f:0x11 DW_TAG_subprogram
  .b32 Linfo_string317                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string318                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 68                                 // DW_AT_decl_line
  .b32 4370                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4252,7 +4240,7 @@ Lcu_begin0:
  .b8 28                                 // Abbrev [28] 0x18b0:0x11 DW_TAG_subprogram
  .b32 Linfo_string319                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string320                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 69                                 // DW_AT_decl_line
  .b32 4370                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4260,7 +4248,7 @@ Lcu_begin0:
  .b8 25                                 // Abbrev [25] 0x18c1:0x18 DW_TAG_subprogram
  .b32 Linfo_string321                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string322                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 72                                 // DW_AT_decl_line
  .b32 6452                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4271,7 +4259,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 30                                 // Abbrev [30] 0x18d9:0x11 DW_TAG_subprogram
  .b32 Linfo_string327                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 74                                 // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -4283,7 +4271,7 @@ Lcu_begin0:
  .b8 0                                  // End Of Children Mark
  .b8 30                                 // Abbrev [30] 0x18ea:0x16 DW_TAG_subprogram
  .b32 Linfo_string327                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 74                                 // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -4298,7 +4286,7 @@ Lcu_begin0:
  .b8 31                                 // Abbrev [31] 0x1900:0x1a DW_TAG_subprogram
  .b32 Linfo_string328                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string329                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 74                                 // DW_AT_decl_line
  .b8 1                                  // DW_AT_declaration
  .b8 1                                  // DW_AT_external
@@ -4313,7 +4301,7 @@ Lcu_begin0:
  .b8 32                                 // Abbrev [32] 0x191a:0x19 DW_TAG_subprogram
  .b32 Linfo_string330                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string331                   // DW_AT_name
- .b8 17                                 // DW_AT_decl_file
+ .b8 10                                 // DW_AT_decl_file
  .b8 74                                 // DW_AT_decl_line
  .b32 6523                              // DW_AT_type
  .b8 1                                  // DW_AT_declaration
@@ -4328,12 +4316,12 @@ Lcu_begin0:
  .b8 27                                 // Abbrev [27] 0x1934:0x33 DW_TAG_structure_type
  .b32 Linfo_string326                   // DW_AT_name
  .b8 12                                 // DW_AT_byte_size
- .b8 18                                 // DW_AT_decl_file
+ .b8 11                                 // DW_AT_decl_file
  .b8 190                                // DW_AT_decl_line
  .b8 14                                 // Abbrev [14] 0x193c:0xe DW_TAG_member
  .b32 Linfo_string323                   // DW_AT_name
  .b32 4370                              // DW_AT_type
- .b8 18                                 // DW_AT_decl_file
+ .b8 11                                 // DW_AT_decl_file
  .b8 192                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -4341,7 +4329,7 @@ Lcu_begin0:
  .b8 14                                 // Abbrev [14] 0x194a:0xe DW_TAG_member
  .b32 Linfo_string324                   // DW_AT_name
  .b32 4370                              // DW_AT_type
- .b8 18                                 // DW_AT_decl_file
+ .b8 11                                 // DW_AT_decl_file
  .b8 192                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -4349,7 +4337,7 @@ Lcu_begin0:
  .b8 14                                 // Abbrev [14] 0x1958:0xe DW_TAG_member
  .b32 Linfo_string325                   // DW_AT_name
  .b32 4370                              // DW_AT_type
- .b8 18                                 // DW_AT_decl_file
+ .b8 11                                 // DW_AT_decl_file
  .b8 192                                // DW_AT_decl_line
  .b8 2                                  // DW_AT_data_member_location
  .b8 35
@@ -4373,14 +4361,14 @@ Lcu_begin0:
  .b64 Lfunc_end0                        // DW_AT_high_pc
  .b32 Linfo_string332                   // DW_AT_MIPS_linkage_name
  .b32 Linfo_string333                   // DW_AT_name
- .b8 16                                 // DW_AT_decl_file
+ .b8 9                                  // DW_AT_decl_file
  .b8 1                                  // DW_AT_decl_line
  .b8 1                                  // DW_AT_external
  .b8 36                                 // Abbrev [36] 0x19a2:0x17 DW_TAG_inlined_subroutine
  .b32 6528                              // DW_AT_abstract_origin
  .b64 Ltmp0                             // DW_AT_low_pc
  .b64 Ltmp1                             // DW_AT_high_pc
- .b8 16                                 // DW_AT_call_file
+ .b8 9                                  // DW_AT_call_file
  .b8 2                                  // DW_AT_call_line
  .b8 0                                  // End Of Children Mark
  .b8 0                                  // End Of Children Mark
